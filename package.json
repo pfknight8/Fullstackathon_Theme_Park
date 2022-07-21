@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/pfknight8/Fullstackathon_Theme_Park#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "mongoose": "^6.4.6",
     "react-router-dom": "^6.3.0"
   },
