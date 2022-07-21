@@ -10,5 +10,3 @@ const Ride = new Schema(
   },
   { timestamps: true }
 );
-
-module.exports = mongoose.model("rides", Ride);
