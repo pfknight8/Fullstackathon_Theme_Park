@@ -10,12 +10,13 @@ const createUsersWithReviews = async (reviews) => {
   console.log(reviews);
   let lenOfItems = 100;
   const users = [...Array(lenOfItems)].map((user) => {
-    const selectedReviews = reviews.splice(0, reviews.length / lenOfItems);
+    // const selectedReviews = reviews.splice(0, reviews.length / lenOfItems);
     return {
       first_name: chance.first(),
       last_name: chance.last(),
       email: chance.email(),
-      review: selectedReviews.map((review) => review._id),
+      review: chance.review(),
+      // review: selectedReviews.map((review) => review._id),
     };
   });
   await User.insertMany(users);
