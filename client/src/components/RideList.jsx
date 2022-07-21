@@ -2,7 +2,7 @@ const RideList = (props) => {
 
   return (
     <div>
-      <div className="coasterCard">
+      <div className="coasterCard" onClick={props.onClick}>
         <div className="img-container">
           <img src={props.image} alt={props.name} />
         </div>

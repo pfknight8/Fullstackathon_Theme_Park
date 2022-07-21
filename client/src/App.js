@@ -10,27 +10,33 @@ import { useState } from 'react'
 
 const App = () => {
   // // State
-  // const [rideId, setRideId] = useState('')
-  
-  // let navigate = useNavigate()
+  const [rideId, setRideId] = useState('')
+
+  let navigate = useNavigate()
 
   // // Functions
-  // const handleRideSelect = (ride) => {
-  //   setRideId(ride)
-  //   navigate(`/ride/:${ride}`)
-  // }
+  const handleRideSelect = (ride) => {
+    setRideId(ride)
+    navigate(`/ride/:${ride}`)
+  }
 
   // Display returns
   return (
-    <div className='App'>
+    <div className="App">
       // Stuff goes here
       <Header />
       <main>
         // Routes
         <Routes>
-          <Route path="/" element={ <Home handleRideSelect={handleRideSelect} /> } />
-          <Route path='/about' element= { <About /> } />
-          <Route path='/ride/:rideId' element= { <ReviewRide rideId={rideId} /> } />
+          <Route
+            path="/"
+            element={<Home handleRideSelect={handleRideSelect} />}
+          />
+          <Route path="/about" element={<About />} />
+          <Route
+            path="/ride/:rideId"
+            element={<ReviewRide rideId={rideId} />}
+          />
         </Routes>
       </main>
     </div>
