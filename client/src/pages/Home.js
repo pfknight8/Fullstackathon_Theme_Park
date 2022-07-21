@@ -29,7 +29,7 @@ const Home = ({ handleRideSelect }) => {
                   image={ride.image}
                   name={ride.name}
                   park={ride.park}
-                  onClick={() => handleRideSelect(ride._id)}
+                  onClick={() => handleRideSelect(ride)} // change "name" to "_id"
                 />
               </div>
             ))
