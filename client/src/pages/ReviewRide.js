@@ -34,9 +34,36 @@ const ReviewRide = ({ rideSelect }) => {
       <section className="review-area">
         <div>
           <h3>Rate Your Experience</h3>
+          <select className="coasters-list" id="coasters">
+            <option value="one-coaster">
+              <span role="img" aria-label="one-coaster">
+                🎢
+              </span>
+            </option>
+            <option value="two-coasters">
+              <span role="img" aria-label="two-coasters">
+                🎢 🎢
+              </span>
+            </option>
+            <option value="three-coasters">
+              <span role="img" aria-label="three-coasters">
+                🎢 🎢 🎢
+              </span>
+            </option>
+            <option value="four-coasters">
+              <span role="img" aria-label="four-coasters">
+                🎢 🎢 🎢 🎢
+              </span>
+            </option>
+            <option value="five-coasters">
+              <span role="img" aria-label="five-coasters">
+                🎢 🎢 🎢 🎢 🎢
+              </span>
+            </option>
+          </select>
           <p>Avg Rating: </p>
           <input placeholder="Add Comments"></input>
-          <button>Submit Review</button>
+          <button type="submit">Submit Review</button>
         </div>
       </section>
     </div>
