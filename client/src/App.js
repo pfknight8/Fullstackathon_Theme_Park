@@ -23,10 +23,9 @@ const App = () => {
   // Display returns
   return (
     <div className="App">
-      // Stuff goes here
       <Header />
+      <h1>Hello!</h1>
       <main>
-        // Routes
         <Routes>
           <Route
             path="/"

@@ -1,12 +1,12 @@
-const { Link } = require("react-router-dom")
+import { Link } from "react-router-dom"
 
 const Header = () => {
 
   return (
     <header>
       <nav>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About Parks</Link>
+        <Link to='/' >Home</Link>
+        <Link to='/about' >About Parks</Link>
       </nav>
     </header>
   )
