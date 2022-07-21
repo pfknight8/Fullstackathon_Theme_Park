@@ -10,14 +10,14 @@ import { useState } from 'react'
 
 const App = () => {
   // // State
-  const [rideId, setRideId] = useState('')
+  const [rideSelect, setRideSelect] = useState('')
 
   let navigate = useNavigate()
 
   // // Functions
   const handleRideSelect = (ride) => {
-    setRideId(ride)
-    navigate(`/ride/:${ride}`)
+    setRideSelect(ride)
+    navigate(`/ride/:${ride.name}`) // change "name" to "_id"
   }
 
   // Display returns
@@ -29,12 +29,12 @@ const App = () => {
         <Routes>
           <Route
             path="/"
-            element={ <Home handleRideSelect={handleRideSelect} /> }
+            element={<Home handleRideSelect={handleRideSelect} />}
           />
-          <Route path="/about" element={ <About /> } />
+          <Route path="/about" element={<About />} />
           <Route
             path="/ride/:rideId"
-            element={ <ReviewRide rideId={rideId} /> }
+            element={<ReviewRide rideSelect={rideSelect} />}
           />
         </Routes>
       </main>
