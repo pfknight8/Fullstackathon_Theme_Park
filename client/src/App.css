@@ -1,0 +1,8 @@
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 4em;
+  background-color: #802020;
+  color: #EECC00;
+}
