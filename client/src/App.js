@@ -6,17 +6,21 @@ import Header from './src/Header'
 import Review from './src/Review'
 import RideList from './src/RideList'
 import './App.css'
-import { uesState, useState } from 'react'
+import { useState } from 'react'
 
 const App = () => {
   // State
-  const [something, setSomething] = useState('')
-  //
-let navigate = useNavigate()
-const handleSelect = (xxx) => {
-  //
-}
+  const [rideId, setRideId] = useState('')
+  
+  let navigate = useNavigate()
 
+  // Functions
+  const handleRideSelect = (ride) => {
+    setRideId(ride)
+    navigate(`/ride/:${ride}`)
+  }
+
+  // Display returns
   return (
     <div className='App'>
       // Stuff goes here
@@ -24,10 +28,10 @@ const handleSelect = (xxx) => {
       <main>
         // Routes
         <Routes>
-          <Route path="/" element={ <Home /> } />
+          <Route path="/" element={ <Home handleRideSelect={handleRideSelect} /> } />
           <Route path='/about' element= { <About /> } />
-          <Route path='/ride/:rideId' element= { <Review /> } />
-          <Route path='/ride' element= { <RideList /> } />
+          <Route path='/ride/:rideId' element= { <Review rideId={rideId} /> } />
+          <Route path='/ride' element= { <RideList handle/> } />
         </Routes>
       </main>
     </div>
