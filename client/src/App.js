@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Header from './components/Header'
 import ReviewRide from './pages/ReviewRide'
-import RideList from './components/RideList'
+// import RideList from './components/RideList'
 import './App.css'
 import { useState } from 'react'
 
@@ -29,12 +29,12 @@ const App = () => {
         <Routes>
           <Route
             path="/"
-            element={<Home handleRideSelect={handleRideSelect} />}
+            element={ <Home handleRideSelect={handleRideSelect} /> }
           />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={ <About /> } />
           <Route
             path="/ride/:rideId"
-            element={<ReviewRide rideId={rideId} />}
+            element={ <ReviewRide rideId={rideId} /> }
           />
         </Routes>
       </main>
