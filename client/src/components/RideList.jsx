@@ -2,18 +2,15 @@ const RideList = (props) => {
 
   return (
     <div>
-      {
-        props.rides.map((ride) => (
       <div className="coasterCard">
         <div className="img-container">
-          <img src={ride.image} alt={ride.name} />
+          <img src={props.image} alt={props.name} />
         </div>
         <div className="name-container">
-          <h2>{ride.name}</h2>
-          <p>Overall Rating: {ride.avg_rating}</p>
+          <h2>{props.name}</h2>
+          <p>Park: {props.park}</p>
         </div>
       </div>
-      ))}
     </div>
   )
 }
