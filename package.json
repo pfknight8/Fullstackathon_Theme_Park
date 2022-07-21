@@ -1,11 +1,11 @@
 {
   "name": "fullstackathon_theme_park",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/pfknight8/Fullstackathon_Theme_Park#readme",
   "dependencies": {
+    "mongoose": "^6.4.6",
     "react-router-dom": "^6.3.0"
-  }
+  },
+  "description": ""
 }
