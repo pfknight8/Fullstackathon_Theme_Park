@@ -9,16 +9,16 @@ import './App.css'
 import { useState } from 'react'
 
 const App = () => {
-  // State
-  const [rideId, setRideId] = useState('')
+  // // State
+  // const [rideId, setRideId] = useState('')
   
-  let navigate = useNavigate()
+  // let navigate = useNavigate()
 
-  // Functions
-  const handleRideSelect = (ride) => {
-    setRideId(ride)
-    navigate(`/ride/:${ride}`)
-  }
+  // // Functions
+  // const handleRideSelect = (ride) => {
+  //   setRideId(ride)
+  //   navigate(`/ride/:${ride}`)
+  // }
 
   // Display returns
   return (
@@ -30,8 +30,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={ <Home handleRideSelect={handleRideSelect} /> } />
           <Route path='/about' element= { <About /> } />
-          <Route path='/ride/:rideId' element= { <Review rideId={rideId} /> } />
-          <Route path='/ride' element= { <RideList handle/> } />
+          <Route path='/ride/:rideId' element= { <ReviewRide rideId={rideId} /> } />
         </Routes>
       </main>
     </div>
