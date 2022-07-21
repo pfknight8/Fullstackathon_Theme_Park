@@ -21,16 +21,19 @@ const Home = ({ handleRideSelect }) => {
   return (
     <div>
       <h1>Best Rides To Visit</h1>
-      <div className="all-rides-list">
-        { ridesGotten ? (rides.map((ride, index) => (
-          <div key={index}>
-            <RideList
-              image={ride.image}
-              name={ride.name}
-              park={ride.park}
-              onClick={() => handleRideSelect(ride._id)} />
-          </div>))) : null
-        }
+      <div className="home-rides">
+        {ridesGotten
+          ? rides.map((ride, index) => (
+              <div key={index}>
+                <RideList
+                  image={ride.image}
+                  name={ride.name}
+                  park={ride.park}
+                  onClick={() => handleRideSelect(ride._id)}
+                />
+              </div>
+            ))
+          : null}
       </div>
     </div>
   )
