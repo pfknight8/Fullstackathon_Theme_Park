@@ -6,3 +6,7 @@ header {
   background-color: #802020;
   color: #EECC00;
 }
+
+header nav a {
+  margin: 0 1em;
+}
