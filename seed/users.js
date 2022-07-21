@@ -15,7 +15,7 @@ const createUsersWithReviews = async (reviews) => {
       first_name: chance.first(),
       last_name: chance.last(),
       email: chance.email(),
-      review: chance.review(),
+      review: chance.sentence(),
       // review: selectedReviews.map((review) => review._id),
     };
   });
