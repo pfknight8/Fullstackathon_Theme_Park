@@ -36,16 +36,13 @@ const About = () => {
   }
   // Handles the selector box and puts it in the formBody
   const handleDropdown = (e) => {
-    console.log(typeof e.target.value)
     let rateValue = e.target.value
     setFormBody({...formBody, rating: rateValue})
   }
   
   const formToDB = async (formBody) => {
-    console.log(formBody)
     if (goodToGo) {
         await axios.post('http://localhost:3001/rides', formBody)
-        console.log('Sent ride to list!')
         toggleGood(false)
         navigate('/')
     } else {
@@ -66,7 +63,7 @@ const About = () => {
   return (
     <div>
       <h1>Howdy!</h1>
-      <p>We'll talk about some stuff here...<br />Care for some Scotch?</p>
+      <p>This site aims to offer a catalouge of roller coasters.<br />Know of a ride that you think deserves to be on the list? Fill out the form below with the relevant info, and submit it to the list!</p>
       <section className="form">
         <div className="formTxt">
           <textarea className="formField" id="name" placeholder="Ride Name" onChange={handleFormChange}></textarea>
@@ -93,6 +90,7 @@ const About = () => {
         </select>
       </section>
       <button type="submit" onClick={handleSubmit}>Submit Ride!</button>
+      <h4>Thanks!</h4>
     </div>
   )
 }
