@@ -1,3 +1,7 @@
+* {
+  text-align: center;
+}
+
 header {
   display: flex;
   justify-content: flex-start;
@@ -17,3 +21,73 @@ header nav a {
   opacity: 0.8;
   cursor: pointer;
 }
+
+.home-rides {
+  padding: 2em 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 320px);
+  grid-gap: 7em;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.img-container {
+ height: 250px;
+ width: 380px; 
+}
+
+select {
+  display:inline-block;
+  background-color:#e3dfc7;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+}
+
+input {
+  display:inline-block;
+  background-color:#e3dfc7;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  text-align: left;
+  color: black;
+}
+
+button {
+  display:inline-block;
+  background-color:#EECC00;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#1b1818;
+  text-align:center;
+  transition: all 0.2s;
+}
+  button:hover {
+  color:#EECC00;
+  background-color: rgb(205, 19, 19);
+  cursor: pointer;
+  }
+  @media all and (max-width:30em){
+  button{
+  display:block;
+  margin:0.4em auto;
+  }
+  }
