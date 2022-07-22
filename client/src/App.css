@@ -51,18 +51,20 @@ select {
   box-sizing: border-box;
 }
 
-input {
+textarea {
   display:inline-block;
   background-color:#e3dfc7;
   padding:0.35em 1.2em;
   border:0.1em solid #FFFFFF;
-  margin:0 0.3em 0.3em 0;
+  margin:0 0.3em -0.7em 0;
   border-radius:0.12em;
   box-sizing: border-box;
   font-family:'Roboto',sans-serif;
   font-weight:300;
   text-align: left;
   color: black;
+  width: 350px;
+  height: 50px;
 }
 
 button {
