@@ -29,6 +29,7 @@ const Home = ({ handleRideSelect }) => {
                   image={ride.image}
                   name={ride.name}
                   park={ride.park}
+                  rating={ride.rating}
                   onClick={() => handleRideSelect(ride)} // change "name" to "_id"
                 />
               </div>
