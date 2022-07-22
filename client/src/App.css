@@ -54,6 +54,7 @@ a {
   grid-template-columns: repeat(auto-fill, 320px);
   grid-gap: 7em;
   justify-content: center;
+  margin: 0 60px 0 0;
 }
 
 img {
