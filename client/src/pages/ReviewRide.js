@@ -62,7 +62,7 @@ const ReviewRide = ({ rideSelect }) => {
             </option>
           </select>
           <p>Avg Rating: </p>
-          <input placeholder="Add Comments"></input>
+          <textarea placeholder="Add Comments"></textarea>
           <button type="submit">Submit Review</button>
         </div>
       </section>
