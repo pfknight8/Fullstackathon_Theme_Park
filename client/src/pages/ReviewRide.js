@@ -1,19 +1,19 @@
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-import RideList from '../components/RideList'
+import { useEffect, useState } from "react";
+import axios from "axios";
+import RideList from "../components/RideList";
 
 const ReviewRide = ({ rideSelect }) => {
-  const [rideSelected, setRideSelect] = useState(false)
-  const [rideReview, setRideReview] = useState(null)
+  const [rideSelected, setRideSelect] = useState(false);
+  const [rideReview, setRideReview] = useState(null);
 
   useEffect(() => {
     const getRideReviews = async () => {
       // const res = await axios.get(`API call here`)
       // setRideReview(res.data....)
-      setRideSelect(true)
-    }
-    getRideReviews()
-  }, [])
+      setRideSelect(true);
+    };
+    getRideReviews();
+  }, []);
 
   return (
     <div className="review-page">
@@ -67,7 +67,7 @@ const ReviewRide = ({ rideSelect }) => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default ReviewRide
+export default ReviewRide;
