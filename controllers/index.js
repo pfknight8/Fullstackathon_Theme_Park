@@ -10,6 +10,16 @@ const getAllRides = async (req, res) => {
   }
 }
 
+const getSelectRide = async (req, res) => {
+  try {
+    const { id } = req.params
+    const ride = await Ride.find({ _id: id })
+    return res.status(200).json({ ride })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const getAllUsers = async (req, res) => {
   try {
     const rides = await User.find({})
@@ -42,5 +52,6 @@ const postNewRide = async (req, res) => {
 module.exports = {
   getAllRides,
   getAllUsers,
-  postNewRide
+  postNewRide,
+  getSelectRide
 }
