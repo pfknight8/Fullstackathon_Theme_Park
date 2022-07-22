@@ -19,7 +19,28 @@ const getAllUsers = async (req, res) => {
   }
 }
 
+// const putUserPost = async (req, res) => {
+//   try {
+//     const { id } = req.params
+//     const users = await User.find({id: id}, req.body)
+//     return res.status(200).json({ users })
+//   } catch (error) {
+//     return res.status(500).send(error.message)
+//   }
+// }
+
+const postNewRide = async (req, res) => {
+  try {
+    const ride = await new Ride(req.body)
+    await ride.save()
+    return res.status(200).json({ ride })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   getAllRides,
-  getAllUsers
+  getAllUsers,
+  postNewRide
 }

@@ -8,4 +8,6 @@ router.get('/rides', controllers.getAllRides)
 
 router.get('/users', controllers.getAllUsers)
 
+router.post('/rides', controllers.postNewRide)
+
 module.exports = router
