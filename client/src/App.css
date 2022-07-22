@@ -9,4 +9,11 @@ header {
 
 header nav a {
   margin: 0 1em;
+  color: #EECC00;
+  text-decoration: none;
+}
+
+.coasterCard:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
