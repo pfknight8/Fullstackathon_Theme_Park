@@ -2,14 +2,11 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
 
-
 const About = () => {
-  const [formBody, setFormBody] = useState({"rating":"A"})
+  const [formBody, setFormBody] = useState({})
   const [goodToGo, toggleGood] = useState(false)
 
   let navigate = useNavigate();
-
-  // useEffect(() => {},[])
 
   //Check to see if the formBody has 5 key:value pairs in it to toggle true.
   useEffect(() => {
@@ -36,41 +33,36 @@ const About = () => {
       default:
         toggleGood(false)
     }
-    // Also need that drop down to convert to a stringified number...hope it's simple.
   }
-
+  // Handles the selector box and puts it in the formBody
+  const handleDropdown = (e) => {
+    console.log(typeof e.target.value)
+    let rateValue = e.target.value
+    setFormBody({...formBody, rating: rateValue})
+  }
+  
   const formToDB = async (formBody) => {
-    // Let the fun begin!
-    // Need the boolean to be true? Can we rely only on the try/catch? Find out next time...
     console.log(formBody)
     if (goodToGo) {
-      // try {
         await axios.post('http://localhost:3001/rides', formBody)
-        // set the boolean to false?
         console.log('Sent ride to list!')
+        toggleGood(false)
         navigate('/')
-      // } catch (error) {
-      //   // Do something!
-      //   console.log('What?!')
-      // }
     } else {
       alert("Form incomplete.")
     }
   }
-  
+
   // Neeh a submit button handler!
   const handleSubmit = (e) => {
     e.preventDefault()
     if (goodToGo) {
-      //can submit thet form!
       formToDB(formBody)
     } else {
-      //not ready
       alert('You are missing something')
     }
   }
   
-  // The return...can change the div structure by giving textareas a className and implementing css. Did it this way due to 2:00AM
   return (
     <div>
       <h1>Howdy!</h1>
@@ -82,7 +74,7 @@ const About = () => {
           <textarea className="formField" id="description" placeholder="Short Description" onChange={handleFormChange}></textarea>
           <textarea className="formField" id="image" placeholder="Image Url" onChange={handleFormChange}></textarea>
         </div>
-        <select className="coasters-list" id="coasters">
+        <select className="coasters-list" id="coasters" onChange={handleDropdown}>
           <option value="1" role="img" aria-label="one-coaster">
               🎢
           </option>
