@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
+import { useNavigate } from "react-router-dom";
 
 
 const About = () => {
   const [formBody, setFormBody] = useState({"rating":"A"})
   const [goodToGo, toggleGood] = useState(false)
+
+  let navigate = useNavigate();
 
   // useEffect(() => {},[])
 
@@ -41,14 +44,15 @@ const About = () => {
     // Need the boolean to be true? Can we rely only on the try/catch? Find out next time...
     console.log(formBody)
     if (goodToGo) {
-      try {
-        formBody = await axios.post('localhost:3001/rides')
+      // try {
+        await axios.post('http://localhost:3001/rides', formBody)
         // set the boolean to false?
         console.log('Sent ride to list!')
-      } catch (error) {
-        // Do something!
-        console.log('What?!')
-      }
+        navigate('/')
+      // } catch (error) {
+      //   // Do something!
+      //   console.log('What?!')
+      // }
     } else {
       alert("Form incomplete.")
     }
