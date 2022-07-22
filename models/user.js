@@ -7,7 +7,7 @@ const UserSchema = new Schema(
     email: { type: String, required: true },
     review: [
       {
-        coasterID: { type: String, required: true },
+        coasterID: { type: String, required: false },
         rating: { type: String, required: false },
         comment: { type: String, required: false },
       },
