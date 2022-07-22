@@ -68,6 +68,11 @@ img {
   width: 380px; 
 }
 
+.selectRating {
+  font-size: 18px;
+  font-weight: normal;
+}
+
 select {
   display:inline-block;
   background-color:#e3dfc7;

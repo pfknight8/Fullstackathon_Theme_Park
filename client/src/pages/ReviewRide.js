@@ -1,15 +1,10 @@
 import { useEffect, useState } from 'react'
-import axios from 'axios'
-import RideList from '../components/RideList'
 
 const ReviewRide = ({ rideSelect }) => {
   const [rideSelected, setRideSelect] = useState(false)
-  const [rideReview, setRideReview] = useState(null)
 
   useEffect(() => {
     const getRideReviews = async () => {
-      // const res = await axios.get(`API call here`)
-      // setRideReview(res.data....)
       setRideSelect(true)
     }
     getRideReviews()
@@ -37,10 +32,12 @@ const ReviewRide = ({ rideSelect }) => {
       </section>
       <section className="review-area">
         <div>
-          <h3>Rate Your Experience</h3>
-          <p>
-            Avg Rating: {rideSelected ? <span>{rideSelect.rating}</span> : null}
-          </p>
+          <h3>
+            Avg Rating:{' '}
+            {rideSelected ? (
+              <span className="selectRating">{rideSelect.rating}</span>
+            ) : null}
+          </h3>
         </div>
       </section>
     </div>
