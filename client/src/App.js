@@ -1,24 +1,24 @@
-import { Route, Routes } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
-import Home from './pages/Home'
-import About from './pages/About'
-import Header from './components/Header'
-import ReviewRide from './pages/ReviewRide'
+import { Route, Routes } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Header from "./components/Header";
+import ReviewRide from "./pages/ReviewRide";
 // import RideList from './components/RideList'
-import './App.css'
-import { useState } from 'react'
+import "./App.css";
+import { useState } from "react";
 
 const App = () => {
   // // State
-  const [rideSelect, setRideSelect] = useState('')
+  const [rideSelect, setRideSelect] = useState("");
 
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
   // // Functions
   const handleRideSelect = (ride) => {
-    setRideSelect(ride)
-    navigate(`/ride/:${ride.name}`) // change "name" to "_id"
-  }
+    setRideSelect(ride);
+    navigate(`/ride/:${ride.name}`); // change "name" to "_id"
+  };
 
   // Display returns
   return (
@@ -39,7 +39,7 @@ const App = () => {
         </Routes>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
