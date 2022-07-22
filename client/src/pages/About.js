@@ -3,21 +3,10 @@ import axios from "axios"
 
 
 const About = () => {
-  const [formBody, setFormBody] = useState({})
+  const [formBody, setFormBody] = useState({"rating":"A"})
   const [goodToGo, toggleGood] = useState(false)
 
-  useEffect(() => {
-    const fillForm = async () => {
-      // Let the fun begin!
-      // Need the boolean to be true? Can we rely only on the try/catch? Find out next time...
-      try {
-        const something = await axios.post('localhost:3001/rides')
-        // set the boolean to false?
-      } catch (error) {
-        // Do something!
-      }
-    }
-  },[])
+  // useEffect(() => {},[])
 
   //Check to see if the formBody has 5 key:value pairs in it to toggle true.
   useEffect(() => {
@@ -46,10 +35,35 @@ const About = () => {
     }
     // Also need that drop down to convert to a stringified number...hope it's simple.
   }
+
+  const formToDB = async (formBody) => {
+    // Let the fun begin!
+    // Need the boolean to be true? Can we rely only on the try/catch? Find out next time...
+    console.log(formBody)
+    if (goodToGo) {
+      try {
+        formBody = await axios.post('localhost:3001/rides')
+        // set the boolean to false?
+        console.log('Sent ride to list!')
+      } catch (error) {
+        // Do something!
+        console.log('What?!')
+      }
+    } else {
+      alert("Form incomplete.")
+    }
+  }
   
   // Neeh a submit button handler!
-  const handleSubmit = () => {
-    //What to do?
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (goodToGo) {
+      //can submit thet form!
+      formToDB(formBody)
+    } else {
+      //not ready
+      alert('You are missing something')
+    }
   }
   
   // The return...can change the div structure by giving textareas a className and implementing css. Did it this way due to 2:00AM
@@ -68,30 +82,20 @@ const About = () => {
         <textarea id="image" placeholder="Image Url" onChange={handleFormChange}></textarea>
       </div>
       <select className="coasters-list" id="coasters">
-        <option value="one-coaster">
-          <span role="img" aria-label="one-coaster">
+        <option value="1" role="img" aria-label="one-coaster">
             🎢
-          </span>
         </option>
-        <option value="two-coasters">
-          <span role="img" aria-label="two-coasters">
+        <option value="2" role="img" aria-label="two-coasters">
             🎢 🎢
-          </span>
         </option>
-        <option value="three-coasters">
-          <span role="img" aria-label="three-coasters">
+        <option value="3" role="img" aria-label="three-coasters">
             🎢 🎢 🎢
-          </span>
         </option>
-        <option value="four-coasters">
-          <span role="img" aria-label="four-coasters">
+        <option value="4" role="img" aria-label="four-coasters">
             🎢 🎢 🎢 🎢
-          </span>
         </option>
-        <option value="five-coasters">
-          <span role="img" aria-label="five-coasters">
+        <option value="5" role="img" aria-label="five-coasters">
             🎢 🎢 🎢 🎢 🎢
-          </span>
         </option>
       </select>
       <button type="submit" onClick={handleSubmit}>Submit Ride!</button>
