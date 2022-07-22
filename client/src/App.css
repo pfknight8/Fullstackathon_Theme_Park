@@ -17,8 +17,34 @@ header nav a {
   text-decoration: none;
 }
 
+a {
+  display:inline-block;
+  padding:0.35em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+  a:hover {
+  color:#EECC00;
+  background-color: rgb(187, 15, 17);
+  border:0.1em solid #EECC00;
+  border-radius:0.12em;
+  cursor: pointer;
+  }
+  @media all and (max-width:30em){
+  a{
+  display:block;
+  margin:0.4em auto;
+  }
+  }
+
+  .coasterCard {
+    width: 380px;
+  }
 .coasterCard:hover {
   opacity: 0.8;
+  border:0.1em solid #EECC00;
+  border-radius:0.12em;
   cursor: pointer;
 }
 
@@ -37,8 +63,8 @@ img {
 }
 
 .img-container {
- height: 250px;
- width: 380px; 
+  height: 250px;
+  width: 380px; 
 }
 
 select {
