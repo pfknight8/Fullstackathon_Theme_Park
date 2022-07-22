@@ -73,25 +73,28 @@ select {
   background-color:#e3dfc7;
   padding:0.35em 1.2em;
   border:0.1em solid #FFFFFF;
-  margin:0 0.3em 0.3em 0;
+  margin:0 0.40em 0.5em 0;
+  margin-top: 5px;
   border-radius:0.12em;
   box-sizing: border-box;
 }
 
 textarea {
-  display:inline-block;
+  display: block;
   background-color:#e3dfc7;
-  padding:0.35em 1.2em;
-  border:0.1em solid #FFFFFF;
-  margin:0 0.3em -0.7em 0;
-  border-radius:0.12em;
+  padding: 0.6em 1.2em;
+  border: 0.1em solid #FFFFFF;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  border-radius: 0.12em;
   box-sizing: border-box;
   font-family:'Roboto',sans-serif;
   font-weight:300;
   text-align: left;
-  color: black;
+  color: #000000;
   width: 350px;
-  height: 50px;
+  height: 40px;
+  font-size: 15px;
 }
 
 button {
