@@ -75,33 +75,31 @@ const About = () => {
     <div>
       <h1>Howdy!</h1>
       <p>We'll talk about some stuff here...<br />Care for some Scotch?</p>
-      <div>
-        <textarea id="name" placeholder="Ride Name" onChange={handleFormChange}></textarea>
-      </div>
-      <div>
-        <textarea id="park" placeholder="Park Name" onChange={handleFormChange}></textarea>
-      <div>
-        <textarea id="description" placeholder="Short Description" onChange={handleFormChange}></textarea>
-      </div>
-        <textarea id="image" placeholder="Image Url" onChange={handleFormChange}></textarea>
-      </div>
-      <select className="coasters-list" id="coasters">
-        <option value="1" role="img" aria-label="one-coaster">
-            🎢
-        </option>
-        <option value="2" role="img" aria-label="two-coasters">
-            🎢 🎢
-        </option>
-        <option value="3" role="img" aria-label="three-coasters">
-            🎢 🎢 🎢
-        </option>
-        <option value="4" role="img" aria-label="four-coasters">
-            🎢 🎢 🎢 🎢
-        </option>
-        <option value="5" role="img" aria-label="five-coasters">
-            🎢 🎢 🎢 🎢 🎢
-        </option>
-      </select>
+      <section className="form">
+        <div className="formTxt">
+          <textarea className="formField" id="name" placeholder="Ride Name" onChange={handleFormChange}></textarea>
+          <textarea className="formField" id="park" placeholder="Park Name" onChange={handleFormChange}></textarea>
+          <textarea className="formField" id="description" placeholder="Short Description" onChange={handleFormChange}></textarea>
+          <textarea className="formField" id="image" placeholder="Image Url" onChange={handleFormChange}></textarea>
+        </div>
+        <select className="coasters-list" id="coasters">
+          <option value="1" role="img" aria-label="one-coaster">
+              🎢
+          </option>
+          <option value="2" role="img" aria-label="two-coasters">
+              🎢 🎢
+          </option>
+          <option value="3" role="img" aria-label="three-coasters">
+              🎢 🎢 🎢
+          </option>
+          <option value="4" role="img" aria-label="four-coasters">
+              🎢 🎢 🎢 🎢
+          </option>
+          <option value="5" role="img" aria-label="five-coasters">
+              🎢 🎢 🎢 🎢 🎢
+          </option>
+        </select>
+      </section>
       <button type="submit" onClick={handleSubmit}>Submit Ride!</button>
     </div>
   )
