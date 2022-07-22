@@ -31,7 +31,7 @@ const App = () => {
             path="/"
             element={<Home handleRideSelect={handleRideSelect} />}
           />
-          <Route path="/about" element={<About />} />
+          <Route path="/share" element={<About />} />
           <Route
             path="/ride/:rideId"
             element={<ReviewRide rideSelect={rideSelect} />}
