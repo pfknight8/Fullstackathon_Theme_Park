@@ -1,8 +1,6 @@
 # THEME PARK HACK-A-THON
 ![Theme Park Hack-A-Thon](/client/public/images/readme_banner.png)
 
----
-
 ## Dates: 7/21/22 - 7/22/22
 
 ## Desription
