@@ -1,4 +1,5 @@
 # THEME PARK HACK-A-THON
+![Theme Park Hack-A-Thon](/client/public/images/readme_banner.png)
 
 ---
 
@@ -11,7 +12,26 @@
 
 [RollerCoaster Tycoon](https://www.rollercoastertycoon.com/)
 
-<img src="https://i.imgur.com/jAg7NI0.png" alt="roller coaster" width="500"/>
+---
+
+## **_Screenshots_**
+
+<pre>
+  <img src="/client/public/images/homepage.png"  alt="Homepage">&nbsp;&nbsp;&nbsp;<img src="/client/public/images/ride_review_page.png" alt="Ride Review Page">&nbsp;&nbsp;&nbsp;<img src="/client/public/images/share_ride.png" alt="Share Ride Page">
+</pre>
+
+---
+
+## **_Technologies Used_**
+
+![Technologies Used](https://tinyurl.com/2tns3kp8)
+
+- JavaScript
+- MongoDB/Mongoose
+- Express
+- React.js
+- Node.js
+- HTML/CSS
 
 ---
 
